@@ -1,11 +1,19 @@
 const express = require('express');
+const getJsonFile = require('load-json-file');
 const router = express.Router();
 const Point = require('../models/pointModel');
 //handling get request for /artists
 router.get('/', (req, res , next) => {
-    Point.find({}).then((points) => {
-        res.status(200).send(points);
+
+    getJsonFile('./test.json').then((json) => {
+        console.log(json);
+        res.status(200).send(json);
     });
+
+    // To return all points
+    // Point.find({}).then((points) => {
+    //     res.status(200).send(points);
+    // });
 });
 
 //handling post request for /artist
