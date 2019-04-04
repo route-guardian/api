@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 
 //setup connection with server
-mongoose.connect('mongodb://localhost/routeGuardian', { useNewUrlParser:true });
+mongoose.connect('mongodb://3.19.75.107/routeGuardian', { useNewUrlParser:true });
 mongoose.Promise = global.Promise;
 
 app.use(bodyParser.json());
