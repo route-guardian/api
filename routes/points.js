@@ -5,15 +5,15 @@ const Point = require('../models/pointModel');
 //handling get request for /artists
 router.get('/', (req, res , next) => {
 
-    // getJsonFile('./test.json').then((json) => {
-    //     console.log(json);
-    //     res.status(200).send(json);
-    // });
+    getJsonFile('./test.json').then((json) => {
+        console.log(json);
+        res.status(200).send(json);
+    });
 
     // To return all points
-    Point.find({}).then((points) => {
-        res.status(200).send(points);
-    });
+    // Point.find({}).then((points) => {
+    //     res.status(200).send(points);
+    // });
 });
 
 //handling post request for /artist
