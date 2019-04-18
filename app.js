@@ -18,7 +18,7 @@ app.use('/points' , artistRoute);
 //show endpoints when on homepage
 app.get('/', function(req, res){
     res.status(200).json({
-        message: "it works!",
+        message: "it works very nice!",
         endPoints: [
             {
                 method: "GET",
